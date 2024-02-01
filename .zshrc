@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git node rust volta npm history history-substring-search yarn)
+plugins=(git node rust volta npm history history-substring-search yarn docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,16 +114,13 @@ export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export PATH="/Users/siwatp/.vscode-dotnet-sdk/.dotnet:$PATH"
 
+export PNPM_HOME="~/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
 # thefuck
 eval $(thefuck --alias)
 
 export PATH="$PATH:/Users/siwatp/.dotnet/tools"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/siwatp/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/siwatp/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/siwatp/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/siwatp/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 eval "$(starship init zsh)"
 
@@ -139,3 +136,30 @@ function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
+
+# bun completions
+[ -s "/Users/siwatp/.bun/_bun" ] && source "/Users/siwatp/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# go
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOPATH
+export PATH=$PATH:$GOBIN
+export PATH=$PATH:$GOROOT/bin
+
+# llvm Path
+export PATH="$PATH:$(brew --prefix)/opt/llvm/bin"
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/siwatp/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/siwatp/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/siwatp/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/siwatp/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
