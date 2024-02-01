@@ -27,3 +27,5 @@ ln -s ~/dotfiles/.zshrc ~/.zshrc
 ## Setup Sketchybar
 Refer to https://github.com/FelixKratz/dotfiles/blob/master/install_sketchybar.sh
 
+## Note
+- `./tmux-sessionizer` from the awesome one and only [ThePrimeagen](https://github.com/ThePrimeagen/.dotfiles/blob/master/bin/.local/scripts/tmux-sessionizer)
