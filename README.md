@@ -21,3 +21,6 @@ ln -s ~/dotfiles/tmux.conf ~/.config/tmux/tmux.conf
 # ZSH
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ```
+
+## Setup Sketchybar
+Refer to https://github.com/FelixKratz/dotfiles/blob/master/install_sketchybar.sh
