@@ -1,9 +1,11 @@
 # dotfiles
 
 ## Screenshot
+
 ![mac os setup with yabai, skhd, sketchybar](./setup.png)
 
 ## Installation
+
 Clone to home directory
 
 ## Symlink Setup
@@ -20,12 +22,17 @@ ln -s ~/dotfiles/skhd ~/.config/skhd
 mkdir -p ~/.config/tmux
 ln -s ~/dotfiles/tmux.conf ~/.config/tmux/tmux.conf
 
+# Kitty
+ln -s ~/dotfiles/kitty ~/.config/kitty
+
 # ZSH
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ```
 
 ## Setup Sketchybar
-Refer to https://github.com/FelixKratz/dotfiles/blob/master/install_sketchybar.sh
+
+Refer to <https://github.com/FelixKratz/dotfiles/blob/master/install_sketchybar.sh>
 
 ## Note
+
 - `./tmux-sessionizer` from the awesome one and only [ThePrimeagen](https://github.com/ThePrimeagen/.dotfiles/blob/master/bin/.local/scripts/tmux-sessionizer)
