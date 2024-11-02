@@ -4,7 +4,7 @@ macos_option_as_alt yes
 
 hide_window_decorations no
 
-background_opacity 0.85
+background_opacity 1
 background_blur 10
 dynamic_background_opacity yes
 
@@ -2614,6 +2614,6 @@ window_padding_width 4
 
 
 # BEGIN_KITTY_THEME
-# Ayu
+# 1984 Dark
 include current-theme.conf
 # END_KITTY_THEME
