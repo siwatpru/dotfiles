@@ -101,6 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim="nvim"
 alias sz="source ~/.zshrc"
+alias st='tmux source-file ~/.config/tmux/tmux.conf'
 alias vz="vim ~/.zshrc"
 alias act="act --container-architecture linux/amd64 --artifact-server-path /tmp/artifacts"
 alias python="python3"
@@ -122,6 +123,7 @@ eval $(thefuck --alias)
 
 export PATH="$PATH:/Users/siwatp/.dotnet/tools"
 
+# Startship prompts
 eval "$(starship init zsh)"
 
 # pnpm
@@ -163,3 +165,23 @@ if [ -f '/Users/siwatp/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/User
 if [ -f '/Users/siwatp/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/siwatp/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+# export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
+# Nvim
+export PATH="/Users/siwatp/nvim-macos-arm64/bin:$PATH"
+
+# Activate syntax highlighting
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Disable underline
+(( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[path]=none
+ZSH_HIGHLIGHT_STYLES[path_prefix]=none
+
+# Activate autosuggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+alias ss='~/tmux-sessionizer'
+alias lg='lazygit'
+alias tf='terraform'
